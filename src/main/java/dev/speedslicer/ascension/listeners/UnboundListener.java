@@ -19,7 +19,6 @@ public class UnboundListener implements Listener {
     }
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerLevelUp(SkillLevelUpEvent event) {
-        Ascension.LOGGER.info("Triggered Level Up Event for " + event.getPlayer().getName() + ", Skill Average: " + event.getUser().getSkillAverage());
         if (!connected.playerHasRank(event.getPlayer())) {
             if (event.getUser().getSkillAverage() >= levelRequirement) {
                 Ascension.LOGGER.info("[Ascension] group " + event.getPlayer().getName() + " has ascended to UNBOUND rank.");
@@ -41,7 +40,7 @@ public class UnboundListener implements Listener {
                 if (meta == null) return;
 
                 meta.setTitle("Unbound");
-                meta.setAuthor("The Ascended");
+                meta.setAuthor("The One Who Watches");
 
                 meta.addPage(
                         "§5§lASCENSION I\n\n" +
@@ -49,9 +48,9 @@ public class UnboundListener implements Listener {
                                 "§0beyond the ordinary.\n\n" +
                                 "§0now, you are §6§lUNBOUND§f,\n" +
                                 "§6Benefits Unlocked:\n" +
-                                "§e• Land Claim §7(30 Blocks)\n" +
+                                "§c• Land Claim §7(1 Chunk), /claim to claim!\n" +
                                 "§b• /ec Access\n" +
-                                "§c• Dungeons I\n\n"
+                                "§c• Combat Realms I\n\n"
                 );
                 book.setItemMeta(meta);
                 event.getPlayer().getInventory().addItem(book);

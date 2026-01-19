@@ -1,5 +1,11 @@
 name: Ascension
 version: '1.0'
+author: SpeedSlicer
 main: dev.speedslicer.ascension.Ascension
 api-version: '1.20'
 depend: [AuraSkills, LuckPerms]
+commands:
+  guide:
+    description: Gives the ascension guide to player who ran it
+    usage: /ascension guide
+    permission: ascension.command.guide

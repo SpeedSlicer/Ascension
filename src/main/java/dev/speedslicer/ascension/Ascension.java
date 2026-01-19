@@ -1,6 +1,7 @@
 package dev.speedslicer.ascension;
 
 import dev.aurelium.auraskills.api.AuraSkillsApi;
+import dev.speedslicer.ascension.commands.CommandAscensionGuide;
 import dev.speedslicer.ascension.listeners.UnboundListener;
 import dev.speedslicer.ascension.ranks.Unbound;
 import dev.speedslicer.ascension.util.RankBase;
@@ -37,6 +38,8 @@ public final class Ascension extends JavaPlugin {
         auraSkills = Objects.requireNonNull(AuraSkillsApi.get());
         rankBase = new ArrayList<>();
         rankBase.add(new Unbound(this, config.getDouble("unbound-averageLevelRequirement")));
+        this.getCommand("guide").setExecutor(new CommandAscensionGuide());
+
     }
 
     @Override
