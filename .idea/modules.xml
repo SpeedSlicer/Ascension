@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Ascension.iml" filepath="$PROJECT_DIR$/.idea/Ascension.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ascension.iml" filepath="$PROJECT_DIR$/Ascension.iml" />
     </modules>
   </component>
 </project>
